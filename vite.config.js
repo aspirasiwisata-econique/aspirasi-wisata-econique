@@ -6,13 +6,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
-    proxy: {
-      '/api': {
-        target: 'https://aspirasi-wisata.vercel.app/api/',
-        changeOrigin: true,
-        secure: false,
-      },
-    },
     allowedHosts: ["40b58d96a1bc.ngrok-free.app"],
     host: true
   }

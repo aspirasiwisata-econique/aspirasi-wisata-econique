@@ -2,7 +2,8 @@ import { useState, useEffect, useCallback, useMemo } from "react";
 import axios from "axios";
 
 // ✅ Gunakan path relatif, biar ngelewatin proxy Vite
-const API_URL = "/api/";
+// const API_URL = "/api/";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function useApi(request, { autoFetch = true } = {}) {
     const isSingle = !Array.isArray(request);
