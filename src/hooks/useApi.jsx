@@ -30,6 +30,7 @@ function useApi(request, { autoFetch = true } = {}) {
                         url: `${API_URL}${url}`,
                         data,
                         headers: { Accept: "application/json" },
+                        withCredentials: true,   // ⬅️ wajib biar cookie ikut terkirim
                     })
                 )
             );
